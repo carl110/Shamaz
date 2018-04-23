@@ -30,6 +30,9 @@
                                 <state key="normal" title="What DID I do">
                                     <color key="titleColor" red="0.0" green="0.90196078431372551" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pastPrompt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DlN-w2-RcZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clz-nH-bYb">
                                 <rect key="frame" x="195" y="35" width="165" height="30"/>
@@ -42,6 +45,9 @@
                                 <state key="normal" title="What WILL I do">
                                     <color key="titleColor" red="0.0" green="0.13725490196078433" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="futurePrompt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8Q-nH-B28"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONn-u5-4yz">
                                 <rect key="frame" x="15" y="592" width="345" height="60"/>
@@ -79,6 +85,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pastFuturePrompt" destination="iC0-TB-NV9" id="Q47-8W-BRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
