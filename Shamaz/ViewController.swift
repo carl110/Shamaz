@@ -38,6 +38,7 @@ class ViewController: UIViewController {
         let pastPrompt = "Describe what your day was like" + " " + randomTime + " ago, with as much detail as you can remember"
         
         pastFuturePrompt.text = pastPrompt
+        
     }
     
     @IBAction func futurePrompt(_ sender: UIButton) {
@@ -59,7 +60,7 @@ class ViewController: UIViewController {
         let randomPlayer = player[randomPlayerIndex]
         
         //Change text in 'pastFuturePromt' to show random Player number
-        let playerPrompt = "Please pass the phone to Player number " + randomPlayer + ". Once they have the phone they can choose 'What DID I do' or 'What WILL I do'"
+        let playerPrompt = "Please pass the phone to Player number " + randomPlayer
         
         pastFuturePrompt.text = playerPrompt
     }
