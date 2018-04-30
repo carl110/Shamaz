@@ -35,6 +35,21 @@ class ViewController: UIViewController {
     
     lazy var myPTime = pTime()
     
+    func nPlayers () -> String {
+        
+        //List of numbers for Players
+        let player = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        
+        //Generate random number for next Player
+        let randomPlayerIndex = Int(arc4random_uniform(UInt32(player.count)))
+        let randomPlayer = player[randomPlayerIndex]
+        
+        let Results: String = "\(randomPlayer)"
+        return Results
+    }
+    
+lazy var noPlayers = nPlayers ()
+    
     //List of numbers for Players
     let player = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     
@@ -62,14 +77,7 @@ class ViewController: UIViewController {
     
     @IBAction func nextPlayer(_ sender: UIButton) {
         
-        //Generate random number for next Player
-        let randomPlayerIndex = Int(arc4random_uniform(UInt32(player.count)))
-        let randomPlayer = player[randomPlayerIndex]
-        
-        //Change text in 'pastFuturePromt' to show random Player number
-        let playerPrompt = "Please pass the phone to Player number " + randomPlayer
-        
-        pastFuturePrompt.text = playerPrompt
+        pastFuturePrompt.text = "Please pass the phone to Player number \(noPlayers)"
     }
 }
 
