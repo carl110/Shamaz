@@ -61,7 +61,7 @@ lazy var noPlayers = nPlayers ()
         
         
         //Change text in 'pastFuturePromt' to random past time
-        
+//        
         
         pastFuturePrompt.text = "Describe what your day was like \(myPTime) ago, with as much detail as you can remember"
         
