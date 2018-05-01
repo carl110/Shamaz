@@ -56,6 +56,11 @@
                                 <state key="normal" title="Time for the Next Palyer">
                                     <color key="titleColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPlayer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v8L-DW-Kr1"/>
                                 </connections>

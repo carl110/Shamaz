@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +62,7 @@ lazy var noPlayers = nPlayers ()
         
         
         //Change text in 'pastFuturePromt' to random past time
-//        
+//
         
         pastFuturePrompt.text = "Describe what your day was like \(myPTime) ago, with as much detail as you can remember"
         
@@ -74,9 +75,13 @@ lazy var noPlayers = nPlayers ()
         pastFuturePrompt.text = "Describe what you would like to be doing in \(myPTime), with as much detail as you can share."
     }
     
-    @IBAction func nextPlayer(_ sender: UIButton) {
+    @IBAction func nextPlayer(_ sender: UIButton)
+     {
         
         pastFuturePrompt.text = "Please pass the phone to Player number \(noPlayers)"
+
+        
+
     }
 }
 
