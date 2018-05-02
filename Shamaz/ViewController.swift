@@ -24,8 +24,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    let myPTime = ShamazModelView.pTime
-    let noPlayers = ShamazModelView.nPlayers
+
     
     
     @IBOutlet weak var pastFuturePrompt: UILabel!
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
 
 
         
-        pastFuturePrompt.text = "Describe what your day was like \(myPTime) ago, with as much detail as you can remember"
+        pastFuturePrompt.text = "Describe what your day was like \(ShamazModelView().myPTime) ago, with as much detail as you can remember"
         
     }
     
@@ -48,14 +47,14 @@ class ViewController: UIViewController {
     @IBAction func futurePrompt(_ sender: UIButton) {
 
         
-        pastFuturePrompt.text = "Describe what you would like to be doing in \(myPTime), with as much detail as you can share."
+        pastFuturePrompt.text = "Describe what you would like to be doing in \(ShamazModelView().myPTime), with as much detail as you can share."
         
     }
 
     @IBAction func nextPlayer(_ sender: UIButton)
      {
         
-        pastFuturePrompt.text = "Please pass the phone to Player number \(noPlayers)"
+        pastFuturePrompt.text = "Please pass the phone to Player number \(ShamazModelView().noPlayers)"
 
 
     }

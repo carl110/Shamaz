@@ -24,7 +24,13 @@ class ShamazModelView {
         return myResults
     }
     
-    lazy var myPTime = pTime()
+    var myPTime: String = ""
+    
+    
+    func temp() {
+        
+        myPTime = pTime()
+    }
     
     func nPlayers () -> String {
         
