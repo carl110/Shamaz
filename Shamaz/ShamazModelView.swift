@@ -24,7 +24,7 @@ class ShamazModelView {
         return myResults
     }
     
-    var myPTime: String = ""
+    var myPTime = ""
     
     
     func temp() {
