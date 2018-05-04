@@ -8,11 +8,25 @@
 
 import UIKit
 
+
+
+
+
+extension UIView {
+
+    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+}
+
 class ViewController: UIViewController {
     
     
     
-
+    @IBOutlet weak var pastPrompt: UIButton!
 
     
 
@@ -37,22 +51,25 @@ class ViewController: UIViewController {
     
     @IBAction func futurePrompt(_ sender: UIButton) {
 
-        
+       
         pastFuturePrompt.text = "Describe what you would like to be doing in \(ShamazModelView().myPTime), with as much detail as you can share."
         
     }
 
     @IBAction func nextPlayer(_ sender: UIButton)
      {
-        
-        pastFuturePrompt.text = "Please pass the phone to Player number \(ShamazModelView().noPlayers)"
 
+        pastFuturePrompt.text = "Please pass the phone to Player number \(ShamazModelView().noPlayers)"
+        
+        view.roundCorners([.topLeft, .topRight, .bottomRight], radius: 6)
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+ 
         
     }
     
