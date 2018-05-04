@@ -45,7 +45,11 @@ class ShamazModelView {
         return Results
     }
     
-    lazy var noPlayers = nPlayers ()
+    var noPlayers = ""
+    
+    func tempPlayer() {
+        noPlayers = nPlayers()
+    }
     
     
 }

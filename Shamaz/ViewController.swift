@@ -24,6 +24,7 @@ extension UIView {
 
 class ViewController: UIViewController {
     
+    let model = ShamazModelView()
     
     
     @IBOutlet weak var pastPrompt: UIButton!
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
 
 
         
-        pastFuturePrompt.text = "Describe what your day was like \(ShamazModelView().myPTime) ago, with as much detail as you can remember"
+        pastFuturePrompt.text = "Describe what your day was like \(model.myPTime) ago, with as much detail as you can remember"
         
     }
     
@@ -52,14 +53,13 @@ class ViewController: UIViewController {
     @IBAction func futurePrompt(_ sender: UIButton) {
 
        
-        pastFuturePrompt.text = "Describe what you would like to be doing in \(ShamazModelView().myPTime), with as much detail as you can share."
-        
+        pastFuturePrompt.text = "Describe what you would like to be doing in \(model.myPTime), with as much detail as you can share."
     }
 
     @IBAction func nextPlayer(_ sender: UIButton)
      {
 
-        pastFuturePrompt.text = "Please pass the phone to Player number \(ShamazModelView().noPlayers)"
+        pastFuturePrompt.text = "Please pass the phone to Player number \(model.noPlayers)"
         
         view.roundCorners([.topLeft, .topRight, .bottomRight], radius: 6)
 
@@ -68,8 +68,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
- 
+        model.temp()
+        model.tempPlayer()
         
     }
     
