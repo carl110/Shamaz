@@ -19,11 +19,19 @@ extension UIView {
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
+        
+        
+    }
+    
+    func setRadius(radius: CGFloat) {
+        self.layer.cornerRadius = radius ;
+        self.layer.masksToBounds = true;
+        
     }
 }
 
 extension UIButton {
-    func centerText(spacing: CGFloat) {
+    func centerTextHorizontally(spacing: CGFloat) {
         titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
         contentEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
         
@@ -35,14 +43,8 @@ class ViewController: UIViewController {
     let model = ShamazModelView()
     
 
-
-    
-
-    
-    
     @IBOutlet weak var what: UILabel!
     @IBOutlet weak var pastFuturePrompt: UILabel!
-    
     
     
     @IBOutlet weak var pastPrompt: UIButton!
@@ -74,15 +76,20 @@ class ViewController: UIViewController {
         model.temp()
         model.tempPlayer()
         
+        //Use setRadius to round button corners
+        nextPlayer.setRadius(radius: 30)
+        
         //Use roundCorners extension to round button corners
-        nextPlayer.roundCorners([.allCorners], radius: 8)
-    futurePrompt.roundCorners([.bottomLeft, .bottomRight], radius: 8)
+    futurePrompt.roundCorners([.bottomRight, .bottomLeft], radius: 8)
     pastPrompt.roundCorners([.bottomLeft, .bottomRight], radius: 8)
         what.roundCorners([.topLeft, .topRight], radius: 8)
    
         //Center text using extension
-        nextPlayer.centerText(spacing: 10)
+        nextPlayer.centerTextHorizontally(spacing: 10)
 
+       // nextPlayer.titleLabel?.numberOfLines = 1
+        
+        
  }
     
     override func didReceiveMemoryWarning() {
