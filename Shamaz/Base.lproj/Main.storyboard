@@ -85,7 +85,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="futurePrompt" destination="clz-nH-bYb" id="CYa-9J-7st"/>
+                        <outlet property="nextPlayer" destination="ONn-u5-4yz" id="ijk-8k-pXF"/>
                         <outlet property="pastFuturePrompt" destination="iC0-TB-NV9" id="Q47-8W-BRL"/>
+                        <outlet property="pastPrompt" destination="sGB-tu-Yee" id="enw-zh-rcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

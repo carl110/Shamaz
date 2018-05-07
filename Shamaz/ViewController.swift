@@ -22,12 +22,13 @@ extension UIView {
     }
 }
 
+
+
 class ViewController: UIViewController {
     
     let model = ShamazModelView()
     
-    
-    @IBOutlet weak var pastPrompt: UIButton!
+
 
     
 
@@ -35,6 +36,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var pastFuturePrompt: UILabel!
     
+    
+    
+    @IBOutlet weak var pastPrompt: UIButton!
     @IBAction func pastPrompt(_ sender: UIButton) {
         
         
@@ -49,19 +53,19 @@ class ViewController: UIViewController {
     }
     
 
-    
+    @IBOutlet weak var futurePrompt: UIButton!
     @IBAction func futurePrompt(_ sender: UIButton) {
 
        
         pastFuturePrompt.text = "Describe what you would like to be doing in \(model.myPTime), with as much detail as you can share."
     }
 
+    @IBOutlet weak var nextPlayer: UIButton!
     @IBAction func nextPlayer(_ sender: UIButton)
      {
 
         pastFuturePrompt.text = "Please pass the phone to Player number \(model.noPlayers)"
         
-        view.roundCorners([.topLeft, .topRight, .bottomRight], radius: 6)
 
     }
     
@@ -71,6 +75,10 @@ class ViewController: UIViewController {
         model.temp()
         model.tempPlayer()
         
+        nextPlayer.roundCorners([.allCorners], radius: 8)
+        futurePrompt.roundCorners([.allCorners], radius: 8)
+        pastPrompt.roundCorners([.allCorners], radius: 8)
+ 
     }
     
     override func didReceiveMemoryWarning() {
