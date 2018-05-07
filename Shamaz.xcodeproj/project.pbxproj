@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		89260B49209875A400E19B24 /* ShamazModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89260B48209875A400E19B24 /* ShamazModelView.swift */; };
+		89260B49209875A400E19B24 /* ShamazViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89260B48209875A400E19B24 /* ShamazViewModel.swift */; };
 		89BF7C72208DDC9E002304F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF7C71208DDC9E002304F3 /* AppDelegate.swift */; };
 		89BF7C74208DDC9E002304F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF7C73208DDC9E002304F3 /* ViewController.swift */; };
 		89BF7C77208DDC9E002304F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BF7C75208DDC9E002304F3 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		89260B48209875A400E19B24 /* ShamazModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamazModelView.swift; sourceTree = "<group>"; };
+		89260B48209875A400E19B24 /* ShamazViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamazViewModel.swift; sourceTree = "<group>"; };
 		89BF7C6E208DDC9E002304F3 /* Shamaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shamaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BF7C71208DDC9E002304F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89BF7C73208DDC9E002304F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				89BF7C71208DDC9E002304F3 /* AppDelegate.swift */,
 				89BF7C93208F6D79002304F3 /* Model View */,
-				89260B48209875A400E19B24 /* ShamazModelView.swift */,
+				89260B48209875A400E19B24 /* ShamazViewModel.swift */,
 				89BF7C92208F6D6C002304F3 /* View */,
 				89BF7C73208DDC9E002304F3 /* ViewController.swift */,
 				89BF7C91208F6D5F002304F3 /* Model */,
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89BF7C74208DDC9E002304F3 /* ViewController.swift in Sources */,
-				89260B49209875A400E19B24 /* ShamazModelView.swift in Sources */,
+				89260B49209875A400E19B24 /* ShamazViewModel.swift in Sources */,
 				89BF7C72208DDC9E002304F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
