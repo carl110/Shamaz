@@ -9,7 +9,7 @@
 import Foundation
 
 
-class ShamazModelView {
+class ShamazViewModel {
     
     func pTime() -> String{
         

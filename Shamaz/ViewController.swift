@@ -32,7 +32,7 @@ extension UIButton {
 class ViewController: UIViewController {
     
     
-    let model = ShamazModelView()
+    let model = ShamazViewModel()
     
     @IBOutlet weak var what: UILabel!
     @IBOutlet weak var pastPrompt: UIButton!
