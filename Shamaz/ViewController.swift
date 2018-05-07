@@ -65,6 +65,7 @@ class ViewController: UIViewController {
    
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
+      
  }
     override func viewDidLayoutSubviews() {
         
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
         
         nextPlayer.frame.size.width = 150
         nextPlayer.center.x = self.view.center.x
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
