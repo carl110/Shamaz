@@ -31,6 +31,7 @@ extension UIButton {
 }
 class ViewController: UIViewController {
     
+    
     let model = ShamazModelView()
     
     @IBOutlet weak var what: UILabel!
@@ -56,10 +57,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //call string from ShamazModelView
-        model.temp()
-        model.tempPlayer()
-        
         //Use setRadius to round button corners
         nextPlayer.setRadius(radius: 30)
    
@@ -68,6 +65,10 @@ class ViewController: UIViewController {
       
  }
     override func viewDidLayoutSubviews() {
+        
+        //call string from ShamazModelView
+        model.temp()
+        model.tempPlayer()
         
         //Use roundCorners extension to round button corners
         what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
