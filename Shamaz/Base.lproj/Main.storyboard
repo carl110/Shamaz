@@ -99,6 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="What" destination="NQB-Fj-N1Z" id="GuG-tX-t0H"/>
                         <outlet property="futurePrompt" destination="clz-nH-bYb" id="CYa-9J-7st"/>
                         <outlet property="nextPlayer" destination="ONn-u5-4yz" id="ijk-8k-pXF"/>
                         <outlet property="pastFuturePrompt" destination="iC0-TB-NV9" id="Q47-8W-BRL"/>

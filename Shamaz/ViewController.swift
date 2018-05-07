@@ -40,6 +40,7 @@ class ViewController: UIViewController {
 
     
     
+    @IBOutlet weak var what: UILabel!
     @IBOutlet weak var pastFuturePrompt: UILabel!
     
     
@@ -75,8 +76,9 @@ class ViewController: UIViewController {
         
         //Use roundCorners extension to round button corners
         nextPlayer.roundCorners([.allCorners], radius: 8)
-        futurePrompt.roundCorners([.allCorners], radius: 8)
-        pastPrompt.roundCorners([.allCorners], radius: 8)
+    futurePrompt.roundCorners([.bottomLeft, .bottomRight], radius: 8)
+    pastPrompt.roundCorners([.bottomLeft, .bottomRight], radius: 8)
+        what.roundCorners([.topLeft, .topRight], radius: 8)
    
         //Center text using extension
         nextPlayer.centerText(spacing: 10)
