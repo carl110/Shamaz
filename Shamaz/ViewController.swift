@@ -13,15 +13,19 @@ import UIKit
 
 
 extension UIView {
-
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
+    
+    func roundCorners(for corners: UIRectCorner, cornerRadius: CGFloat)
+    {
+        let path = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
         
-        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        self.layer.mask = maskLayer
     }
+
+
     
     func setRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius ;
@@ -80,9 +84,9 @@ class ViewController: UIViewController {
         nextPlayer.setRadius(radius: 30)
         
         //Use roundCorners extension to round button corners
-    futurePrompt.roundCorners([.bottomRight, .bottomLeft], radius: 8)
-    pastPrompt.roundCorners([.bottomLeft, .bottomRight], radius: 8)
-        what.roundCorners([.topLeft, .topRight], radius: 8)
+
+        pastPrompt.roundCorners(for: [.bottomLeft,], cornerRadius: 8)
+        what.roundCorners(for: [.topRight, .topLeft], cornerRadius: 8)
    
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
@@ -91,6 +95,14 @@ class ViewController: UIViewController {
         
         
  }
+    
+    override func viewDidLayoutSubviews() {
+        
+        //Use roundCorners extension to round button corners
+        what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
+        pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+        futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
