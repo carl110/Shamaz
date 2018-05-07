@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 extension UIView {
     
     func roundCorners(for corners: UIRectCorner, cornerRadius: CGFloat)
@@ -24,8 +20,6 @@ extension UIView {
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
     }
-
-
     
     func setRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius ;
@@ -70,6 +64,8 @@ class ViewController: UIViewController {
      {
         pastFuturePrompt.text = "Please pass the phone to Player number \(model.noPlayers)"
         
+      
+        
     }
     
     override func viewDidLoad() {
@@ -82,16 +78,12 @@ class ViewController: UIViewController {
         
         //Use setRadius to round button corners
         nextPlayer.setRadius(radius: 30)
-        
-        //Use roundCorners extension to round button corners
-
-        pastPrompt.roundCorners(for: [.bottomLeft,], cornerRadius: 8)
-        what.roundCorners(for: [.topRight, .topLeft], cornerRadius: 8)
    
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
 
-       // nextPlayer.titleLabel?.numberOfLines = 1
+      //  nextPlayer.frame.size.width = 250;
+      // nextPlayer.titleLabel?.numberOfLines = 1
         
         
  }
@@ -102,6 +94,9 @@ class ViewController: UIViewController {
         what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
         pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
         futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+        
+          nextPlayer.frame.size.width = 150
+        nextPlayer.center.x = self.view.center.x
     }
     
     override func didReceiveMemoryWarning() {
