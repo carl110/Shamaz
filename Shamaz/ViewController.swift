@@ -17,16 +17,14 @@ extension UIView {
         maskLayer.path = path.cgPath
         self.layer.mask = maskLayer
     }
-    
     func setRadius(radius: CGFloat) {
-        self.layer.cornerRadius = radius ;
-        self.layer.masksToBounds = true;
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
     }
 }
 extension UIButton {
     func centerTextHorizontally(spacing: CGFloat) {
         titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
-        contentEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
     }
 }
 class ViewController: UIViewController {
@@ -43,15 +41,15 @@ class ViewController: UIViewController {
     @IBAction func pastPrompt(_ sender: UIButton)
     {
         //Change text in 'pastFuturePromt' to random past time
-        pastFuturePrompt.text = "Describe what your day was like \(model.myPTime) ago, with as much detail as you can remember"
+        pastFuturePrompt.text = "Describe what your day was like \(model.pTime()) ago, with as much detail as you can remember"
     }
     @IBAction func futurePrompt(_ sender: UIButton)
     {
-        pastFuturePrompt.text = "Describe what you would like to be doing in \(model.myPTime), with as much detail as you can share"
+        pastFuturePrompt.text = "Describe what you would like to be doing in \(model.pTime()), with as much detail as you can share"
     }
     @IBAction func nextPlayer(_ sender: UIButton)
      {
-        pastFuturePrompt.text = "Please pass the phone to Player number \(model.noPlayers)"
+        pastFuturePrompt.text = "Please pass the phone to Player number \(model.nPlayers())"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,20 +62,22 @@ class ViewController: UIViewController {
         nextPlayer.centerTextHorizontally(spacing: 10)
       
  }
-    override func viewDidLayoutSubviews() {
-        
-        //call string from ShamazModelView
-        model.temp()
-        model.tempPlayer()
-        
+    
+    override func viewDidAppear(_ animated: Bool) {
         //Use roundCorners extension to round button corners
         what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
         pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
         futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
         
+        
 
+    }
+    override func viewDidLayoutSubviews() {
+
+        
         //Set bound size of button to fit text in 1 line without truncating
         nextPlayer.bounds.size.width = 150
+        
         
 
     }

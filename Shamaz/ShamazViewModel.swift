@@ -24,14 +24,6 @@ class ShamazViewModel {
         return myResults
     }
     
-    var myPTime: String = ""
-    
-    
-    func temp() {
-        
-        myPTime = pTime()
-    }
-    
     func nPlayers () -> String {
         
         //List of numbers for Players
@@ -44,12 +36,4 @@ class ShamazViewModel {
         let Results: String = "\(randomPlayer)"
         return Results
     }
-    
-    var noPlayers = ""
-    
-    func tempPlayer() {
-        noPlayers = nPlayers()
-    }
-    
-    
 }
