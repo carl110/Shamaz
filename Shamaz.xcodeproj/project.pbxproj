@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890D01AC20A2E3B1006ED203 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D01AB20A2E3B1006ED203 /* UIView+extensions.swift */; };
+		890D01AE20A2E419006ED203 /* UIButton+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890D01AD20A2E419006ED203 /* UIButton+extensions.swift */; };
 		89260B49209875A400E19B24 /* ShamazViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89260B48209875A400E19B24 /* ShamazViewModel.swift */; };
 		89BF7C72208DDC9E002304F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF7C71208DDC9E002304F3 /* AppDelegate.swift */; };
 		89BF7C74208DDC9E002304F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BF7C73208DDC9E002304F3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		890D01AB20A2E3B1006ED203 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		890D01AD20A2E419006ED203 /* UIButton+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extensions.swift"; sourceTree = "<group>"; };
 		89260B48209875A400E19B24 /* ShamazViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShamazViewModel.swift; sourceTree = "<group>"; };
 		89BF7C6E208DDC9E002304F3 /* Shamaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shamaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89BF7C71208DDC9E002304F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890D01AA20A2E330006ED203 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				890D01AB20A2E3B1006ED203 /* UIView+extensions.swift */,
+				890D01AD20A2E419006ED203 /* UIButton+extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		89BF7C65208DDC9E002304F3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		89BF7C70208DDC9E002304F3 /* Shamaz */ = {
 			isa = PBXGroup;
 			children = (
+				890D01AA20A2E330006ED203 /* Extension */,
 				89BF7C71208DDC9E002304F3 /* AppDelegate.swift */,
 				89BF7C93208F6D79002304F3 /* Model View */,
 				89260B48209875A400E19B24 /* ShamazViewModel.swift */,
@@ -162,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890D01AE20A2E419006ED203 /* UIButton+extensions.swift in Sources */,
 				89BF7C74208DDC9E002304F3 /* ViewController.swift in Sources */,
 				89260B49209875A400E19B24 /* ShamazViewModel.swift in Sources */,
+				890D01AC20A2E3B1006ED203 /* UIView+extensions.swift in Sources */,
 				89BF7C72208DDC9E002304F3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

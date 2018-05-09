@@ -8,29 +8,11 @@
 
 import UIKit
 
-extension UIView {
-    
-    func roundCorners(for corners: UIRectCorner, cornerRadius: CGFloat)
-    {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-    func setRadius(radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.layer.masksToBounds = true
-    }
-}
-extension UIButton {
-    func centerTextHorizontally(spacing: CGFloat) {
-        titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
-    }
-}
 class ViewController: UIViewController {
     
     
     let model = ShamazViewModel()
+    
     
     @IBOutlet weak var what: UILabel!
     @IBOutlet weak var pastPrompt: UIButton!
