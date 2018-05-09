@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     }
     @IBAction func futurePrompt(_ sender: UIButton)
     {
-        pastFuturePrompt.text = "Describe what you would like to be doing in \(model.myPTime), with as much detail as you can share."
+        pastFuturePrompt.text = "Describe what you would like to be doing in \(model.myPTime), with as much detail as you can share"
     }
     @IBAction func nextPlayer(_ sender: UIButton)
      {
@@ -75,8 +75,10 @@ class ViewController: UIViewController {
         pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
         futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
         
-        nextPlayer.frame.size.width = 150
-        nextPlayer.center.x = self.view.center.x
+
+        //Set bound size of button to fit text in 1 line without truncating
+        nextPlayer.bounds.size.width = 150
+        
 
     }
     override func didReceiveMemoryWarning() {
