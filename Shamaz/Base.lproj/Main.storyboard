@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rVv-gS-5cR">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Player Input View-->
+        <scene sceneID="m9v-Yt-tbB">
+            <objects>
+                <viewController id="rVv-gS-5cR" customClass="PlayerInputView" customModule="Shamaz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xjD-PQ-JZO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Names Here..." adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-tR-z3a">
+                                <rect key="frame" x="20" y="50" width="236" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameInput:" destination="rVv-gS-5cR" eventType="editingDidEnd" id="7Fp-dF-YDM"/>
+                                    <action selector="nameInput:" destination="9Z4-4m-cOv" eventType="editingDidEnd" id="kW9-Gf-YzF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aS-uA-gBR">
+                                <rect key="frame" x="20" y="656" width="177" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="N4r-MJ-RJ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Player">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPlayer:" destination="rVv-gS-5cR" eventType="touchUpInside" id="0ko-yB-Nfj"/>
+                                    <action selector="addPlayer:" destination="9Z4-4m-cOv" eventType="touchUpInside" id="3ql-pb-JnS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-6v-Lzk">
+                                <rect key="frame" x="217" y="656" width="177" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0dl-70-tYd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="9Z4-4m-cOv" eventType="touchUpInside" id="Lee-yV-0E8"/>
+                                    <action selector="startGame:" destination="rVv-gS-5cR" eventType="touchUpInside" id="bLg-OO-vi1"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="4XZ-gj-SjB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To enter a players name input it into the above text box and click Add Player for each player to be added." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwk-XQ-Ar8">
+                                <rect key="frame" x="20" y="88" width="374" height="551"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qQk-oV-rnf" firstAttribute="trailing" secondItem="RWP-6v-Lzk" secondAttribute="trailing" constant="20" id="0hh-z0-N1V"/>
+                            <constraint firstItem="qQk-oV-rnf" firstAttribute="bottom" secondItem="RWP-6v-Lzk" secondAttribute="bottom" constant="20" id="3NF-AY-sXP"/>
+                            <constraint firstItem="qQk-oV-rnf" firstAttribute="bottom" secondItem="1aS-uA-gBR" secondAttribute="bottom" constant="20" id="6Gh-UD-0FD"/>
+                            <constraint firstItem="RWP-6v-Lzk" firstAttribute="height" secondItem="1aS-uA-gBR" secondAttribute="height" id="8Tw-gf-TWk"/>
+                            <constraint firstItem="1aS-uA-gBR" firstAttribute="leading" secondItem="qQk-oV-rnf" secondAttribute="leading" constant="20" id="Dny-52-ODx"/>
+                            <constraint firstItem="RWP-6v-Lzk" firstAttribute="leading" secondItem="1aS-uA-gBR" secondAttribute="trailing" constant="20" id="OQr-6l-2gI"/>
+                            <constraint firstItem="RWP-6v-Lzk" firstAttribute="width" secondItem="1aS-uA-gBR" secondAttribute="width" id="lvT-G8-rCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qQk-oV-rnf"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerList" destination="Dwk-XQ-Ar8" id="fPE-5L-bFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hNO-1t-6a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9Z4-4m-cOv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-472.46376811594206" y="134.5108695652174"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -108,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="132.88043478260872"/>
+            <point key="canvasLocation" x="248" y="135"/>
         </scene>
     </scenes>
 </document>
