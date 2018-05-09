@@ -24,14 +24,30 @@ class ViewController: UIViewController {
     {
         //Change text in 'pastFuturePromt' to random past time
         pastFuturePrompt.text = "Describe what your day was like \(model.pTime()) ago, with as much detail as you can remember"
+        nextPlayer.isEnabled = true
+        pastPrompt.isEnabled = false
+        futurePrompt.isEnabled = false
+        nextPlayer.alpha = 1
+        futurePrompt.alpha = 0.17
     }
     @IBAction func futurePrompt(_ sender: UIButton)
     {
         pastFuturePrompt.text = "Describe what you would like to be doing in \(model.pTime()), with as much detail as you can share"
+        nextPlayer.isEnabled = true
+        pastPrompt.isEnabled = false
+        futurePrompt.isEnabled = false
+        nextPlayer.alpha = 1
+        pastPrompt.alpha = 0.17
     }
     @IBAction func nextPlayer(_ sender: UIButton)
      {
         pastFuturePrompt.text = "Please pass the phone to Player number \(model.nPlayers())"
+        nextPlayer.isEnabled = false
+        pastPrompt.isEnabled = true
+        futurePrompt.isEnabled = true
+        nextPlayer.alpha = 0.17
+        pastPrompt.alpha = 1
+        futurePrompt.alpha = 1
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +58,9 @@ class ViewController: UIViewController {
    
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
+        
+        nextPlayer.isEnabled = false
+        nextPlayer.alpha = 0.17
       
  }
     
