@@ -63,7 +63,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Start select a button above for a Past or Future endevours prompt, then press the button below to choose a new player." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iC0-TB-NV9">
                                 <rect key="frame" x="15" y="108" width="384" height="545"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
