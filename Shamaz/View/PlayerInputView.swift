@@ -10,11 +10,16 @@ import UIKit
 
 class PlayerInputView: UIViewController {
  
-    @IBOutlet weak var playerList: UILabel!
-    @IBOutlet weak var nameInput: UITextField!
-
     var nameText = ""
     var playerNumber = 0
+    
+    @IBOutlet weak var playerList: UITextView!
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var addPlayer: UIButton!
+    @IBOutlet weak var startGame: UIButton!
+
+    
+
     
     @IBAction func nameInput(_ sender: UITextField) {
     }
@@ -30,7 +35,8 @@ class PlayerInputView: UIViewController {
     @IBAction func startGame(_ sender: UIButton) {
     }
     override func viewDidLoad() {
-        
+        startGame.setRadius(radius: 8)
+        addPlayer.setRadius(radius: 8)
     }
 }
 

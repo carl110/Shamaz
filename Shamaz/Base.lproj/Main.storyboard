@@ -88,8 +88,10 @@
                         <viewLayoutGuide key="safeArea" id="qQk-oV-rnf"/>
                     </view>
                     <connections>
-                        <outlet property="nameInput" destination="wMe-tR-z3a" id="zCF-oW-UKS"/>
+                        <outlet property="addPlayer" destination="1aS-uA-gBR" id="iHS-Pb-mvy"/>
+                        <outlet property="nameInput" destination="wMe-tR-z3a" id="iCf-fK-yft"/>
                         <outlet property="playerList" destination="Dwk-XQ-Ar8" id="fPE-5L-bFj"/>
+                        <outlet property="startGame" destination="RWP-6v-Lzk" id="Wq2-pI-l29"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNO-1t-6a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
