@@ -10,6 +10,8 @@ import Foundation
 
 
 class ShamazViewModel {
+
+    let pName = PlayerInputView()
     
     func pTime() -> String{
         

@@ -12,12 +12,13 @@ class PlayerInputView: UIViewController {
  
     var nameText = ""
     var playerNumber = 0
-    var array: [String] = []
+    var inputNameArray: [String] = []
     
     @IBOutlet weak var playerList: UILabel!
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var addPlayer: UIButton!
     @IBOutlet weak var startGame: UIButton!
+    
 
     
 
@@ -33,15 +34,17 @@ class PlayerInputView: UIViewController {
         //Append name to previouse name on UILabel
         nameText = nameInput.text!
         playerList.text = (playerList.text ?? "") + "\(playerNumber). \(nameText)\n"
+        nameInput.text = ""
         
         //add names entered into textField into an array
-        array.append(nameInput.text!)
+        inputNameArray.append(nameInput.text!)
         
         
        /* for name in array {
             print(name)
         }*/
       
+        print(inputNameArray.count)
         
     }
     
