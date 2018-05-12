@@ -34,11 +34,13 @@ class PlayerInputView: UIViewController {
         //Append name to previouse name on UILabel
         nameText = nameInput.text!
         playerList.text = (playerList.text ?? "") + "\(playerNumber). \(nameText)\n"
-        nameInput.text = ""
+
         
         //add names entered into textField into an array
         inputNameArray.append(nameInput.text!)
         
+        //CLEARS THE TEXT FIELD ONCE BUTTON IS PUSHED
+        nameInput.text = ""
         
        /* for name in array {
             print(name)
@@ -46,13 +48,20 @@ class PlayerInputView: UIViewController {
       
         print(inputNameArray.count)
         
+        print(inputNameArray)
+        
+//        let Result: Array = inputNameArray
+        
     }
+    
     
     @IBAction func startGame(_ sender: UIButton) {
     }
     override func viewDidLoad() {
         startGame.setRadius(radius: 8)
         addPlayer.setRadius(radius: 8)
+        
+        
     }
 }
 
