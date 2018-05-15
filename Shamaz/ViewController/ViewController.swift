@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         nextPlayer.disableButton()
         pastPrompt.enableButton()
         futurePrompt.enableButton()
+
         
         
     }
@@ -58,6 +59,8 @@ class ViewController: UIViewController {
         nextPlayer.centerTextHorizontally(spacing: 10)
         
         nextPlayer.disableButton()
+        
+
 
       
  }

@@ -19,7 +19,11 @@ class PlayerInputView: UIViewController {
     @IBOutlet weak var addPlayer: UIButton!
     @IBOutlet weak var startGame: UIButton!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMain"{
 
+        }
+    }
     
 
     
