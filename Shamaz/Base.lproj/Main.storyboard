@@ -167,10 +167,26 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMg-eK-6Uf">
+                                <rect key="frame" x="156.66666666666666" y="175" width="101.99999999999997" height="60"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.25490196078431371" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="AXc-FU-nJy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rVv-gS-5cR" kind="showDetail" id="Le6-uu-huC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mMg-eK-6Uf" firstAttribute="top" secondItem="sGB-tu-Yee" secondAttribute="bottom" constant="75" id="3Dh-So-LXT"/>
                             <constraint firstItem="clz-nH-bYb" firstAttribute="top" secondItem="NQB-Fj-N1Z" secondAttribute="bottom" id="3Gf-zM-hgd"/>
+                            <constraint firstItem="mMg-eK-6Uf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fM-IL-hMa"/>
                             <constraint firstItem="iC0-TB-NV9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7yA-LH-FzI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQB-Fj-N1Z" secondAttribute="trailing" constant="15" id="8Yg-a4-FWd"/>
                             <constraint firstItem="sGB-tu-Yee" firstAttribute="top" secondItem="NQB-Fj-N1Z" secondAttribute="bottom" id="Cpu-Uz-gju"/>
@@ -191,6 +207,7 @@
                     <connections>
                         <outlet property="What" destination="NQB-Fj-N1Z" id="GuG-tX-t0H"/>
                         <outlet property="futurePrompt" destination="clz-nH-bYb" id="CYa-9J-7st"/>
+                        <outlet property="newGame" destination="mMg-eK-6Uf" id="pP6-As-jWa"/>
                         <outlet property="nextPlayer" destination="ONn-u5-4yz" id="ijk-8k-pXF"/>
                         <outlet property="pastFuturePrompt" destination="iC0-TB-NV9" id="Q47-8W-BRL"/>
                         <outlet property="pastPrompt" destination="sGB-tu-Yee" id="enw-zh-rcM"/>

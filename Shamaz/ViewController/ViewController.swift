@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class ViewController: UIViewController {
     
 
@@ -22,7 +23,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var futurePrompt: UIButton!
     @IBOutlet weak var pastFuturePrompt: UILabel!
     @IBOutlet weak var nextPlayer: UIButton!
-
+    @IBOutlet weak var newGame: UIButton!
+    
+    
+    
     @IBAction func pastPrompt(_ sender: UIButton)
     {
         //Change text in 'pastFuturePromt' to random past time
@@ -46,6 +50,8 @@ class ViewController: UIViewController {
 
             pastPrompt.disableButton()
             futurePrompt.disableButton()
+            newGame.isHidden = false
+            
         }
         else {
         let randomPlayerIndex = Int(arc4random_uniform(UInt32(nameArray.count)))
@@ -61,20 +67,27 @@ class ViewController: UIViewController {
 
 
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         //Use setRadius to round button corners
         nextPlayer.setRadius(radius: 30)
+        newGame.setRadius(radius: 30)
    
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
+        newGame.centerTextHorizontally(spacing: 10)
         
         pastPrompt.disableButton()
         futurePrompt.disableButton()
         
         nextPlayer.titleLabel?.numberOfLines = 1
+        
+        newGame.isHidden = true
 
  }
     
