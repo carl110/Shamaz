@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     let model = ShamazViewModel()
     let pName = PlayerInputView()
-    
+    var nameArray: [String] = []
+
     @IBOutlet weak var what: UILabel!
     @IBOutlet weak var pastPrompt: UIButton!
     @IBOutlet weak var futurePrompt: UIButton!
@@ -40,12 +41,26 @@ class ViewController: UIViewController {
     }
     @IBAction func nextPlayer(_ sender: UIButton)
      {
-        pastFuturePrompt.text = "Please pass the phone to Player number \(model.nPlayers())"
+        if nameArray.isEmpty {
+            pastFuturePrompt.text = "All players have had a go"
+        }
+        else {
+        let randomPlayerIndex = Int(arc4random_uniform(UInt32(nameArray.count)))
+        let randomPlayer = nameArray[randomPlayerIndex]
+
+        pastFuturePrompt.text = "Please pass the phone to Player number \(randomPlayer)"
+        
+        nameArray.removeLast(randomPlayerIndex)
+        }
         nextPlayer.disableButton()
         pastPrompt.enableButton()
         futurePrompt.enableButton()
 
         
+        print(nameArray)
+
+//        print (self.nameArray)
+//        print(nameArray.count)
         
     }
     override func viewDidLoad() {
@@ -61,8 +76,6 @@ class ViewController: UIViewController {
         nextPlayer.disableButton()
         nextPlayer.titleLabel?.numberOfLines = 1
 
-
-      
  }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,18 +88,7 @@ class ViewController: UIViewController {
             
         }
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//        DispatchQueue.main.async {
-//        //Use roundCorners extension to round button corners
-//            self.what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
-//            self.pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
-//            self.futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
-//        }
-//
-//
-//    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

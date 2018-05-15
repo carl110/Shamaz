@@ -19,13 +19,13 @@ class PlayerInputView: UIViewController {
     @IBOutlet weak var addPlayer: UIButton!
     @IBOutlet weak var startGame: UIButton!
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToMain"{
-//            var nameArray = segue.destination as! ViewController
-//            nameArray = self.inputNameArray
-//        }
-//    }
-//    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMain"{
+            let vc = segue.destination as! ViewController
+            vc.nameArray = self.inputNameArray
+            
+        }
+    }
 
     
     @IBAction func nameInput(_ sender: UITextField) {

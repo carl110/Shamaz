@@ -11,7 +11,7 @@ import UIKit
 
 extension UIButton {
     func centerTextHorizontally(spacing: CGFloat) {
-        titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+        contentEdgeInsets = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
     }
     
     func enableButton() {
@@ -25,6 +25,10 @@ extension UIButton {
     }
     func chosenButton() {
         alpha = 1
+        isEnabled = false
+    }
+    func hiddenButton() {
+        alpha = 0
         isEnabled = false
     }
 }

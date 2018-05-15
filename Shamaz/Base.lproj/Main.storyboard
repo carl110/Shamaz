@@ -65,7 +65,7 @@
                                 <connections>
                                     <action selector="startGame:" destination="9Z4-4m-cOv" eventType="touchUpInside" id="Lee-yV-0E8"/>
                                     <action selector="startGame:" destination="rVv-gS-5cR" eventType="touchUpInside" id="bLg-OO-vi1"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="4XZ-gj-SjB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToMain" id="4XZ-gj-SjB"/>
                                 </connections>
                             </button>
                         </subviews>
