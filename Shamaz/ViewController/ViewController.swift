@@ -59,32 +59,35 @@ class ViewController: UIViewController {
         nextPlayer.centerTextHorizontally(spacing: 10)
         
         nextPlayer.disableButton()
-        
+        nextPlayer.titleLabel?.numberOfLines = 1
 
 
       
  }
     
-    override func viewDidAppear(_ animated: Bool) {
-        //Use roundCorners extension to round button corners
-        what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
-        pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
-        futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+    override func viewWillAppear(_ animated: Bool) {
         
-        
-
+        DispatchQueue.main.async {
+            //Use roundCorners extension to round button corners
+            self.what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
+            self.pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+            self.futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+            
+        }
     }
     
-    
-    override func viewDidLayoutSubviews() {
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//        DispatchQueue.main.async {
+//        //Use roundCorners extension to round button corners
+//            self.what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
+//            self.pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+//            self.futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
+//        }
+//
+//
+//    }
 
-        
-        //Set bound size of button to fit text in 1 line without truncating
-        nextPlayer.bounds.size.width = 150
-        
-        
-
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
