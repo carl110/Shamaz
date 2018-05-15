@@ -43,6 +43,9 @@ class ViewController: UIViewController {
      {
         if nameArray.isEmpty {
             pastFuturePrompt.text = "All players have had a go"
+
+            pastPrompt.disableButton()
+            futurePrompt.disableButton()
         }
         else {
         let randomPlayerIndex = Int(arc4random_uniform(UInt32(nameArray.count)))
@@ -50,10 +53,12 @@ class ViewController: UIViewController {
         pastFuturePrompt.text = "Please pass the phone to Player number \(randomPlayer)"
         //remove array item that has just displayed
         nameArray.remove(at: randomPlayerIndex)
+            
+            pastPrompt.enableButton()
+            futurePrompt.enableButton()
         }
         nextPlayer.disableButton()
-        pastPrompt.enableButton()
-        futurePrompt.enableButton()
+
 
     }
     override func viewDidLoad() {
@@ -66,7 +71,8 @@ class ViewController: UIViewController {
         //Center text using extension
         nextPlayer.centerTextHorizontally(spacing: 10)
         
-        nextPlayer.disableButton()
+        pastPrompt.disableButton()
+        futurePrompt.disableButton()
         
         nextPlayer.titleLabel?.numberOfLines = 1
 
