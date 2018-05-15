@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMg-eK-6Uf">
-                                <rect key="frame" x="156.66666666666666" y="175" width="101.99999999999997" height="60"/>
+                                <rect key="frame" x="156.66666666666666" y="110" width="101.99999999999997" height="60"/>
                                 <color key="backgroundColor" red="0.6705882352941176" green="0.25490196078431371" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="AXc-FU-nJy"/>
@@ -184,7 +184,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mMg-eK-6Uf" firstAttribute="top" secondItem="sGB-tu-Yee" secondAttribute="bottom" constant="75" id="3Dh-So-LXT"/>
+                            <constraint firstItem="mMg-eK-6Uf" firstAttribute="top" secondItem="sGB-tu-Yee" secondAttribute="bottom" constant="10" id="3Dh-So-LXT"/>
                             <constraint firstItem="clz-nH-bYb" firstAttribute="top" secondItem="NQB-Fj-N1Z" secondAttribute="bottom" id="3Gf-zM-hgd"/>
                             <constraint firstItem="mMg-eK-6Uf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5fM-IL-hMa"/>
                             <constraint firstItem="iC0-TB-NV9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7yA-LH-FzI"/>

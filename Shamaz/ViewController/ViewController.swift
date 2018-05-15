@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     @IBAction func nextPlayer(_ sender: UIButton)
      {
         if nameArray.isEmpty {
-            pastFuturePrompt.text = "All players have had a go"
+            pastFuturePrompt.text = "All players have now had a turn. To restart please press New Game above"
 
             pastPrompt.disableButton()
             futurePrompt.disableButton()
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         else {
         let randomPlayerIndex = Int(arc4random_uniform(UInt32(nameArray.count)))
         let randomPlayer = nameArray[randomPlayerIndex]
-        pastFuturePrompt.text = "Please pass the phone to Player number \(randomPlayer)"
+        pastFuturePrompt.text = "Please pass the phone to \(randomPlayer)"
         //remove array item that has just displayed
         nameArray.remove(at: randomPlayerIndex)
             
