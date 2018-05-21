@@ -19,15 +19,6 @@ class PlayerInputView: UIViewController {
     @IBOutlet weak var addPlayer: UIButton!
     @IBOutlet weak var startGame: UIButton!
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToMain"{
-            let vc = segue.destination as! ViewController
-            vc.nameArray = self.inputNameArray
-            
-        }
-    }
-
-    
     @IBAction func nameInput(_ sender: UITextField) {
     }
     
@@ -38,35 +29,30 @@ class PlayerInputView: UIViewController {
         
         //Append name to previouse name on UILabel
         nameText = nameInput.text!
-        playerList.text = (playerList.text ?? "") + "\(playerNumber). \(nameText)\n"
+        playerList.text = (playerList.text ?? "") + "\n\(playerNumber). \(nameText)"
 
-        
         //add names entered into textField into an array
         inputNameArray.append(nameInput.text!)
         
         //CLEARS THE TEXT FIELD ONCE BUTTON IS PUSHED
         nameInput.text = ""
         
-       /* for name in array {
-            print(name)
-        }*/
-      
-        print(inputNameArray.count)
-        
-        print(inputNameArray)
-        
-//        let Result: Array = inputNameArray
-        
     }
     
-    
     @IBAction func startGame(_ sender: UIButton) {
+    }
+    
+    //allows inputNameArray to be read on ViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMain"{
+            let vc = segue.destination as! ViewController
+            vc.nameArray = self.inputNameArray
+            
+        }
     }
     override func viewDidLoad() {
         startGame.setRadius(radius: 8)
         addPlayer.setRadius(radius: 8)
-        
-        
     }
 }
 

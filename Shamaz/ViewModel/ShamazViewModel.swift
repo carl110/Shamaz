@@ -25,17 +25,3 @@ class ShamazViewModel {
         let myResults: String = "\(randomTime)"
         return myResults
     }
-    
-    func nPlayers () -> String {
-        
-        //List of numbers for Players
-        let player = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        
-        //Generate random number for next Player
-        let randomPlayerIndex = Int(arc4random_uniform(UInt32(player.count)))
-        let randomPlayer = player[randomPlayerIndex]
-        
-        let Results: String = "\(randomPlayer)"
-        return Results
-    }
-}

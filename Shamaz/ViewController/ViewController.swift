@@ -12,10 +12,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-    
     let model = ShamazViewModel()
-    let pName = PlayerInputView()
     var nameArray: [String] = []
 
     @IBOutlet weak var what: UILabel!
@@ -24,8 +21,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var pastFuturePrompt: UILabel!
     @IBOutlet weak var nextPlayer: UIButton!
     @IBOutlet weak var newGame: UIButton!
-    
-    
     
     @IBAction func pastPrompt(_ sender: UIButton)
     {
@@ -45,30 +40,27 @@ class ViewController: UIViewController {
     }
     @IBAction func nextPlayer(_ sender: UIButton)
      {
+        //if array is empty prmopt to restart game
         if nameArray.isEmpty {
-            pastFuturePrompt.text = "All players have now had a turn. To restart please press New Game above"
-
+            pastFuturePrompt.text = "All players have now completed their turn. To restart, please press the New Game button above"
             pastPrompt.disableButton()
             futurePrompt.disableButton()
             newGame.isHidden = false
-            
         }
         else {
+            //randomise names displayed
         let randomPlayerIndex = Int(arc4random_uniform(UInt32(nameArray.count)))
         let randomPlayer = nameArray[randomPlayerIndex]
-        pastFuturePrompt.text = "Please pass the phone to \(randomPlayer)"
+        pastFuturePrompt.text = "Please pass the phone to \(randomPlayer).\n \(randomPlayer), please select a button above for your prompt."
         //remove array item that has just displayed
         nameArray.remove(at: randomPlayerIndex)
             
             pastPrompt.enableButton()
             futurePrompt.enableButton()
         }
+        //always disable nextPlayer button
         nextPlayer.disableButton()
-
-
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,9 +78,8 @@ class ViewController: UIViewController {
         futurePrompt.disableButton()
         
         nextPlayer.titleLabel?.numberOfLines = 1
-        
+        //keep newGame button hidden until required
         newGame.isHidden = true
-
  }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,11 +89,8 @@ class ViewController: UIViewController {
             self.what.roundCorners(for: [.topLeft, .topRight], cornerRadius: 8)
             self.pastPrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
             self.futurePrompt.roundCorners(for: [.bottomLeft, .bottomRight], cornerRadius: 8)
-            
         }
     }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
