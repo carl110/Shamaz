@@ -46,6 +46,7 @@ class ViewController: UIViewController {
             pastPrompt.disableButton()
             futurePrompt.disableButton()
             newGame.isHidden = false
+            nextPlayer.isHidden = true
         }
         else {
             //randomise names displayed
