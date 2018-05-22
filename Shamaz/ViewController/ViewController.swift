@@ -42,7 +42,7 @@ class ViewController: UIViewController {
      {
         //if array is empty prmopt to restart game
         if nameArray.isEmpty {
-            pastFuturePrompt.text = "All players have now completed their turn. To restart, please press the New Game button above"
+            pastFuturePrompt.text = "All players have now completed their turn. To restart, please press the New Game button"
             pastPrompt.disableButton()
             futurePrompt.disableButton()
             newGame.isHidden = false
