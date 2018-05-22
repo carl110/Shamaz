@@ -25,3 +25,4 @@ class ShamazViewModel {
         let myResults: String = "\(randomTime)"
         return myResults
     }
+}
