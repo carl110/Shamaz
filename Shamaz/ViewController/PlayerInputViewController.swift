@@ -22,7 +22,9 @@ class PlayerInputView: UIViewController {
     }
     
     @IBAction func addPlayer(_ sender: UIButton) {
-
+        if (nameInput.text?.isEmpty)! {
+        }
+        else{
         //Append name to previouse name on UILabel
         nameText = nameInput.text!
         playerList.text = (playerList.text ?? "") + "\n\(inputNameArray.count+1). \(nameText)"
@@ -35,6 +37,7 @@ class PlayerInputView: UIViewController {
         
         if inputNameArray.count > 1 {
             startGame.enableButton()
+        }
         }
         
     }
