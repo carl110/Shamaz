@@ -11,7 +11,6 @@ import UIKit
 class PlayerInputView: UIViewController {
  
     var nameText = ""
-    var playerNumber = 0
     var inputNameArray: [String] = []
     
     @IBOutlet weak var playerList: UILabel!
@@ -23,13 +22,10 @@ class PlayerInputView: UIViewController {
     }
     
     @IBAction func addPlayer(_ sender: UIButton) {
-        
-        //Add player number to player name
-        playerNumber += 1
-        
+
         //Append name to previouse name on UILabel
         nameText = nameInput.text!
-        playerList.text = (playerList.text ?? "") + "\n\(playerNumber). \(nameText)"
+        playerList.text = (playerList.text ?? "") + "\n\(inputNameArray.count+1). \(nameText)"
 
         //add names entered into textField into an array
         inputNameArray.append(nameInput.text!)
@@ -37,9 +33,14 @@ class PlayerInputView: UIViewController {
         //CLEARS THE TEXT FIELD ONCE BUTTON IS PUSHED
         nameInput.text = ""
         
+        if inputNameArray.count > 1 {
+            startGame.enableButton()
+        }
+        
     }
     
     @IBAction func startGame(_ sender: UIButton) {
+
     }
     
     //allows inputNameArray to be read on ViewController
@@ -53,6 +54,7 @@ class PlayerInputView: UIViewController {
     override func viewDidLoad() {
         startGame.setRadius(radius: 8)
         addPlayer.setRadius(radius: 8)
+        startGame.disableButton()
     }
 }
 
