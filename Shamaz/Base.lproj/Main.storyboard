@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Names Here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMe-tR-z3a">
-                                <rect key="frame" x="15" y="35" width="384" height="30"/>
+                                <rect key="frame" x="15" y="308" width="384" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GDX-8b-MAa"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aS-uA-gBR">
-                                <rect key="frame" x="15" y="80" width="184.66666666666666" height="30"/>
+                                <rect key="frame" x="15" y="353" width="184.66666666666666" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HLv-bN-F5m"/>
@@ -46,14 +46,15 @@
                                     <action selector="addPlayer:" destination="9Z4-4m-cOv" eventType="touchUpInside" id="3ql-pb-JnS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To enter a players name input it into the above text box and click Add Player for each player to be added." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwk-XQ-Ar8">
-                                <rect key="frame" x="15" y="125" width="384" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwk-XQ-Ar8">
+                                <rect key="frame" x="15" y="398" width="384" height="81.333333333333314"/>
+                                <string key="text">To enter a players name input it into the above text box and click Add Player for each player to be added. Once all names are added click on Start Game.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-6v-Lzk">
-                                <rect key="frame" x="214.66666666666663" y="80" width="184.33333333333337" height="30"/>
+                                <rect key="frame" x="214.66666666666663" y="353" width="184.33333333333337" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.50588235290000005" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Sxl-1a-cqB"/>
@@ -72,14 +73,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Dwk-XQ-Ar8" firstAttribute="top" secondItem="1aS-uA-gBR" secondAttribute="bottom" constant="15" id="0bk-7e-EBd"/>
-                            <constraint firstItem="1aS-uA-gBR" firstAttribute="top" secondItem="wMe-tR-z3a" secondAttribute="bottom" constant="15" id="4Tc-9z-CSs"/>
                             <constraint firstItem="RWP-6v-Lzk" firstAttribute="top" secondItem="wMe-tR-z3a" secondAttribute="bottom" constant="15" id="5PC-KJ-caO"/>
                             <constraint firstItem="RWP-6v-Lzk" firstAttribute="leading" secondItem="1aS-uA-gBR" secondAttribute="trailing" constant="15" id="If6-gA-H2C"/>
+                            <constraint firstItem="1aS-uA-gBR" firstAttribute="centerY" secondItem="xjD-PQ-JZO" secondAttribute="centerY" id="O5x-um-ARa"/>
                             <constraint firstItem="qQk-oV-rnf" firstAttribute="trailing" secondItem="RWP-6v-Lzk" secondAttribute="trailing" constant="15" id="PKP-Xx-OuM"/>
                             <constraint firstItem="wMe-tR-z3a" firstAttribute="leading" secondItem="qQk-oV-rnf" secondAttribute="leading" constant="15" id="Rz9-cf-9xR"/>
                             <constraint firstItem="Dwk-XQ-Ar8" firstAttribute="leading" secondItem="qQk-oV-rnf" secondAttribute="leading" constant="15" id="TuX-kL-caE"/>
                             <constraint firstItem="1aS-uA-gBR" firstAttribute="leading" secondItem="qQk-oV-rnf" secondAttribute="leading" constant="15" id="UY1-Ia-aJn"/>
-                            <constraint firstItem="wMe-tR-z3a" firstAttribute="top" secondItem="qQk-oV-rnf" secondAttribute="top" constant="15" id="a9G-z8-NqD"/>
                             <constraint firstItem="qQk-oV-rnf" firstAttribute="trailing" secondItem="wMe-tR-z3a" secondAttribute="trailing" constant="15" id="c2i-ZN-ohP"/>
                             <constraint firstItem="qQk-oV-rnf" firstAttribute="trailing" secondItem="Dwk-XQ-Ar8" secondAttribute="trailing" constant="15" id="c5L-6g-tDN"/>
                             <constraint firstItem="1aS-uA-gBR" firstAttribute="top" secondItem="wMe-tR-z3a" secondAttribute="bottom" constant="15" id="htr-Zx-UAW"/>

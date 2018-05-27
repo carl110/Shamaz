@@ -9,8 +9,7 @@
 import UIKit
 
 class PlayerInputView: UIViewController {
- 
-    var nameText = ""
+
     var inputNameArray: [String] = []
     
     @IBOutlet weak var playerList: UILabel!
@@ -22,12 +21,10 @@ class PlayerInputView: UIViewController {
     }
     
     @IBAction func addPlayer(_ sender: UIButton) {
-        if (nameInput.text?.isEmpty)! {
+        //if text box is empty or has only whitespaces
+        if (nameInput.text?.trimmingCharacters(in: .whitespaces).isEmpty)! {
         }
         else{
-        //Append name to previouse name on UILabel
-        nameText = nameInput.text!
-        playerList.text = (playerList.text ?? "") + "\n\(inputNameArray.count+1). \(nameText)"
 
         //add names entered into textField into an array
         inputNameArray.append(nameInput.text!)
